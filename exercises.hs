@@ -18,16 +18,16 @@ exec01 = do
 
 
 -- ==================== IAGO ========================
-myLength :: [Int] -> Int
-myLength [] = 0
-myLength (x:xs) = 1 + myLength xs
+myLengthList :: [Int] -> Int
+myLengthList [] = 0
+myLengthList (x:xs) = 1 + myLengthList xs
 
 exec02 = do
   putStrLn "Calcular o tamanho de uma lista"
   putStrLn "Informe uma lista de números separados por espaço"
   input <- getLine
   let list = map read (words input) :: [Int]
-  putStrLn ("Tamanho: " ++ show (myLength list))
+  putStrLn ("Tamanho: " ++ show (myLengthList list))
 
 
 
@@ -38,16 +38,16 @@ exec03 = do
 
 
 -- ==================== IAGO ========================
-prodList :: [Int] -> Int
-prodList [] = 1
-prodList (x:xs) = x * prodList xs
+myProdList :: [Int] -> Int
+myProdList [] = 1
+myProdList (x:xs) = x * myProdList xs
 
 exec04 = do
   putStrLn "Calcular o produto dos elementos de uma lista"
   putStrLn "Informe uma lista de números separados por espaço"
   input <- getLine
   let list = map read (words input) :: [Int]
-  putStrLn ("Produto: " ++ show (prodList list))
+  putStrLn ("Produto: " ++ show (myProdList list))
 
 
 -- ==================== GUSTAVO ========================
