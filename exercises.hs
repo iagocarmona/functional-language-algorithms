@@ -1,4 +1,7 @@
-main = do 
+{-# OPTIONS_GHC -Wno-unrecognised-pragmas #-}
+{-# HLINT ignore "Use foldr" #-}
+
+main = do
   putStrLn "exec01 - Testar se um elemento é membro de uma lista"
   putStrLn "exec02 - Calcular o tamanho de uma lista"
   putStrLn "exec03 - Calcular a soma dos elementos de uma lista"
@@ -15,21 +18,28 @@ exec01 = do
 
 
 -- ==================== IAGO ========================
-exec02 = do 
+exec02 = do
   putStrLn "Calcular o tamanho de uma lista"
 
 
 
 -- ==================== GUSTAVO ========================
-exec03 = do 
+exec03 = do
   putStrLn "Calcular a soma dos elementos de uma lista"
 
 
 
 -- ==================== IAGO ========================
+prodList :: [Int] -> Int
+prodList [] = 1
+prodList (x:xs) = x * prodList xs
+
 exec04 = do
   putStrLn "Calcular o produto dos elementos de uma lista"
-
+  putStrLn "Informe uma lista de números separados por espaço"
+  input <- getLine
+  let list = map read (words input) :: [Int]
+  putStrLn ("Produto: " ++ show (prodList list))
 
 
 -- ==================== GUSTAVO ========================
@@ -48,7 +58,7 @@ exec06 = do
 exec07 = do
   putStrLn "Concatenação de duas listas"
 
-  
+
 
 -- ==================== IAGO ========================
 exec08 = do
