@@ -1,5 +1,6 @@
 {-# OPTIONS_GHC -Wno-unrecognised-pragmas #-}
 {-# HLINT ignore "Use foldr" #-}
+{-# HLINT ignore "Use infix" #-}
 
 main = do
   putStrLn "exec01 - Testar se um elemento é membro de uma lista"
@@ -82,5 +83,19 @@ exec07 = do
 
 
 -- ==================== IAGO ========================
+myIntercectionList :: [Int] -> [Int] -> [Int]
+myIntercectionList [] _ = []
+myIntercectionList _ [] = []
+myIntercectionList (x:xs) ys
+  | elem x ys = x : myIntercectionList xs ys
+  | otherwise = myIntercectionList xs ys
+
 exec08 = do
   putStrLn "Interseção de duas listas"
+  putStrLn "Informe uma lista de números separados por espaço"
+  input1 <- getLine
+  let list1 = map read (words input1) :: [Int]
+  putStrLn "Informe outra lista de números separados por espaço"
+  input2 <- getLine
+  let list2 = map read (words input2) :: [Int]
+  putStrLn ("Intersecção: " ++ show (myIntercectionList list1 list2))
