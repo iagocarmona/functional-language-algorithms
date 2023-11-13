@@ -57,8 +57,21 @@ exec05 = do
 
 
 -- ==================== IAGO ========================
+myIsListEqual :: [Int] -> [Int] -> Bool
+myIsListEqual [] [] = True
+myIsListEqual [] _ = False
+myIsListEqual _ [] = False
+myIsListEqual (x:xs) (y:ys) = x == y && myIsListEqual xs ys
+
 exec06 = do
   putStrLn "Testar se duas listas são iguais"
+  putStrLn "Informe uma lista de números separados por espaço"
+  input1 <- getLine
+  let list1 = map read (words input1) :: [Int]
+  putStrLn "Informe outra lista de números separados por espaço"
+  input2 <- getLine
+  let list2 = map read (words input2) :: [Int]
+  putStrLn ("As listas são iguais? " ++ show (myIsListEqual list1 list2))
 
 
 
