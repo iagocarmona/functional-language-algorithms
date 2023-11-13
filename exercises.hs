@@ -12,29 +12,43 @@ main = do
 exec01 = do
   putStrLn "Testar se um elemento é membro de uma lista"
 
+
+
 -- ==================== IAGO ========================
 exec02 = do 
   putStrLn "Calcular o tamanho de uma lista"
+
+
 
 -- ==================== GUSTAVO ========================
 exec03 = do 
   putStrLn "Calcular a soma dos elementos de uma lista"
 
+
+
 -- ==================== IAGO ========================
 exec04 = do
   putStrLn "Calcular o produto dos elementos de uma lista"
+
+
 
 -- ==================== GUSTAVO ========================
 exec05 = do
   putStrLn "Reversão de lista"
 
+
+
 -- ==================== IAGO ========================
 exec06 = do
   putStrLn "Testar se duas listas são iguais"
 
+
+
 -- ==================== GUSTAVO ========================
 exec07 = do
   putStrLn "Concatenação de duas listas"
+
+  
 
 -- ==================== IAGO ========================
 exec08 = do
