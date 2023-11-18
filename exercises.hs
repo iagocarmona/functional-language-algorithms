@@ -10,11 +10,24 @@ main = do
   putStrLn "exec05 - Reversão de lista"
   putStrLn "exec06 - Testar se duas listas são iguais"
   putStrLn "exec07 - Concatenação de duas listas"
-  putStrLn "exec08 - Interseção de duas listas"
+  putStrLn "exec08 - Intersecção de duas listas"
 
 -- ==================== GUSTAVO ========================
+searchElem :: Int -> [Int] -> Bool
+searchElem x myList
+    | null myList = False
+    | head myList == x = True
+    | otherwise = searchElem x (tail myList)
+
 exec01 = do
   putStrLn "Testar se um elemento é membro de uma lista"
+  putStrLn "Informe uma lista de números separados por espaço:"
+  input <- getLine
+  let list = map read (words input) :: [Int]
+  putStrLn "Informe o número a ser pesquisado na lista:"
+  input2 <- getLine
+  let number = read input2 :: Int
+  putStrLn ("O número" ++ show number ++ " está na lista? " ++ show (searchElem number list))
 
 
 
@@ -87,11 +100,11 @@ myIntercectionList :: [Int] -> [Int] -> [Int]
 myIntercectionList [] _ = []
 myIntercectionList _ [] = []
 myIntercectionList (x:xs) ys
-  | elem x ys = x : myIntercectionList xs ys
+  | searchElem x ys = x : myIntercectionList xs ys
   | otherwise = myIntercectionList xs ys
 
 exec08 = do
-  putStrLn "Interseção de duas listas"
+  putStrLn "Intersecção de duas listas"
   putStrLn "Informe uma lista de números separados por espaço"
   input1 <- getLine
   let list1 = map read (words input1) :: [Int]
