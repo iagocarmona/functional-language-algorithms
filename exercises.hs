@@ -46,8 +46,17 @@ exec02 = do
 
 
 -- ==================== GUSTAVO ========================
+sumList :: [Int] -> Int
+sumList myList
+  | null myList = 0
+  | otherwise = head myList + sumList (tail myList)
+
 exec03 = do
   putStrLn "Calcular a soma dos elementos de uma lista"
+  putStrLn "Informe uma lista de números separados por espaço:"
+  input <- getLine
+  let list = map read (words input) :: [Int]
+  putStrLn ("Soma: " ++ show (sumList list))
 
 
 
