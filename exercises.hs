@@ -108,8 +108,20 @@ exec06 = do
 
 
 -- ==================== GUSTAVO ========================
+concatenateLists :: [Int] -> [Int] -> [Int]
+concatenateLists [] secondList = secondList
+concatenateLists firstList [] = firstList
+concatenateLists (x:xs) secondList = x : concatenateLists xs secondList
+
 exec07 = do
   putStrLn "Concatenação de duas listas"
+  putStrLn "Informe a primeira lista com elementos separados por espaço:"
+  input1 <- getLine
+  putStrLn "Informe a segunda lista com elementos separados por espaço:"
+  input2 <- getLine
+  let list1 = map read (words input1) :: [Int]
+  let list2 = map read (words input2) :: [Int]
+  putStrLn ("Concatenação: " ++ show (concatenateLists list1 list2))
 
 
 
