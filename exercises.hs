@@ -74,8 +74,17 @@ exec04 = do
 
 
 -- ==================== GUSTAVO ========================
+reverseList :: [Int] -> [Int]
+reverseList myList
+    | null myList = []
+    | otherwise = reverseList (tail myList) ++ [head myList]
+
 exec05 = do
-  putStrLn "Reversão de lista"
+  putStrLn "Invertendo uma lista"
+  putStrLn "Informe uma lista de números separados por espaço:"
+  input <- getLine
+  let list = map read (words input) :: [Int]
+  putStrLn ("Invertida: " ++ show (reverseList list))
 
 
 
