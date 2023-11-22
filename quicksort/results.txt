@@ -1,0 +1,9 @@
+Resultados do quicksort:
+----- 1M de elementos -----
+
+
+Com construções funcionais:
+Tempo de execução:  30.51691198348999
+
+Sem construções funcionais:
+Tempo de execução:  10.347896814346313

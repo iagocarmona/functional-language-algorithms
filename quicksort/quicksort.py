@@ -30,6 +30,10 @@ def quick_sort_fc(arr):
 
 
 if __name__ == "__main__":
+    file = open("results.txt", "w")
+    print("Resultados do quicksort:", file=file)
+    print("----- 1M de elementos -----\n", file=file)
+
     # gerando um array de 1.000.000 de elementos aleatórios
     arr = np.random.randint(1, 1000000, 1000000)
     print("Lista de 1M de elementos gerada...")
@@ -41,8 +45,9 @@ if __name__ == "__main__":
     tempo_final = time.time()  # em segundos
 
     # imprimindo o tempo de execução
-    print("\nCom construções funcionais:")
-    print("Tempo de execução: ", tempo_final - tempo_inicial)  # em segundos
+    print("\nCom construções funcionais:", file=file)
+    print("Tempo de execução: ", tempo_final -
+          tempo_inicial, file=file)  # em segundos
 
     # calculando o tempo de execução da função sem construções funcionais
     print("\nOrdenando sem utilizar construções funcionais...")
@@ -51,5 +56,8 @@ if __name__ == "__main__":
     tempo_final = time.time()  # em segundos
 
     # imprimindo o tempo de execução
-    print("\nSem construções funcionais:")
-    print("Tempo de execução: ", tempo_final - tempo_inicial)  # em segundos
+    print("\nSem construções funcionais:", file=file)
+    print("Tempo de execução: ", tempo_final -
+          tempo_inicial, file=file)  # em segundos
+
+    file.close()
