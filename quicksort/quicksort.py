@@ -31,7 +31,7 @@ def quick_sort_fc(arr):
 
 if __name__ == "__main__":
     file = open("results.txt", "w")
-    print("Resultados do quicksort:", file=file)
+    print("Resultados do quicksort (Python):", file=file)
     print("----- 1M de elementos -----\n", file=file)
 
     # gerando um array de 1.000.000 de elementos aleatórios

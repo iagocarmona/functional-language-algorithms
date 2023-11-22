@@ -1,9 +1,9 @@
-Resultados do quicksort:
+Resultados do quicksort (Python):
 ----- 1M de elementos -----
 
 
 Com construções funcionais:
-Tempo de execução:  30.51691198348999
+Tempo de execução:  42.6035373210907
 
 Sem construções funcionais:
-Tempo de execução:  10.347896814346313
+Tempo de execução:  10.229412078857422
