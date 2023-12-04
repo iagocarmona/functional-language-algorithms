@@ -1,9 +1,16 @@
 Resultados do quicksort (Python):
------ 1M de elementos -----
+----- 100 mil elementos -----
 
 
 Com construções funcionais:
-Tempo de execução:  42.6035373210907
+Tempo de execução:  2.7636845111846924
 
 Sem construções funcionais:
-Tempo de execução:  10.229412078857422
+Tempo de execução:  0.8100218772888184
+
+=======================================
+
+Resultados do quicksort (Haskell): 
+----- 100 mil elementos -----
+
+Tempo de execução: 0,48s user 0,24s system 100% cpu 0,721 total
