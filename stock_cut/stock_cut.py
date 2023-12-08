@@ -1,6 +1,16 @@
 from functools import reduce
-import random
 import time
+
+# Função auxiliar para carregar a lista de pedidos do arquivo txt
+def load_orders_from_file(filename):
+    orders = []
+
+    with open(filename, 'r') as file:
+        for line in file:
+            order = int(line.strip())
+            orders.append(order)
+
+    return orders
 
 
 def cutting_stock(orders, stock_length):
@@ -39,10 +49,11 @@ if __name__ == "__main__":
     # stock_length = int(input("Informe o tamanho fixo das barras: "))
     # N = int(input("Digite o tamanho da lista de pedidos: "))
     stock_length = 100
-    N = 1000000
 
-    # Lista de pedidos (tamanhos) gerados aleatoriamente entre 1 e o tamanho fixo das barras
-    orders = [random.randint(1, stock_length) for _ in range(N)]
+    # Carregando a lista de pedidos do arquivo txt
+    # orders = load_orders_from_file("orders_1s.txt")
+    # orders = load_orders_from_file("orders_10s.txt")
+    orders = load_orders_from_file("orders_1min.txt")
 
     # calculando o tempo de execução da função com construções funcionais
     tempo_inicial = time.time()  # em segundos

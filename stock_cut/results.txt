@@ -1,7 +1,0 @@
-Resultados do Corte de Estoque (Python):
-
-Com construções funcionais:
-Tempo de execução:  24.75801968574524
-
-Sem construções funcionais:
-Tempo de execução:  13.09196400642395
