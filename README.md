@@ -33,9 +33,9 @@ exec07 - Concatenação de duas listas
 exec08 - Interseção de duas listas
 ```
 
-### Para ver a execução de cada exercício, informe o label: Exemplo `exec01` ou `exec03`
+### Para executar cada exercício, informe sua label. Por exemplo: `exec01` ou `exec03`.
 
-### Para sair do terminal do `ghci` digite `:q`
+### Para sair do terminal do `ghci` digite `:q` ou `ctrl` + `d`.
 
 # Exemplo de execução
 
@@ -90,4 +90,30 @@ Informe uma lista de números separados por espaço
 1 2 3 4 5 6
 Tamanho: 6
 ghci>
+```
+
+
+## Como Executar o Quicksort
+
+#### De forma Interpretada com GHCI
+- Inicie o interpretador GHCI
+```bash
+ghci
+```
+
+- Importe no `ghci` a biblioteca que gera números aleatórios, a biblioteca que realiza o benchmark, o programa a ser executado e execute o programa através da função principal, tudo isso através da sequência de comandos:
+
+```bash
+:m System.Random
+:set -package criterion
+:m Criterion.Main
+:l quicksort.hs
+main
+```
+
+#### De forma Compilada com GHC
+
+```bash
+ghc -package criterion quicksort.hs
+./quicksort
 ```
