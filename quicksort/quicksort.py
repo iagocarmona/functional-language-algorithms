@@ -33,17 +33,21 @@ if __name__ == "__main__":
     file = open("results.txt", "w")
     print("Resultados do quicksort (Python):", file=file)
 
-    # gerando um array de 100.000 de elementos aleatórios
-    # arr = np.random.randint(1, 100000, 100000)
-    # print("Lista de 1M de elementos gerada...")
-    with open('array.txt', 'r') as file_array:
+    # Carregando array do arquivo txt
+    print("Carregando array do arquivo txt...")
+
+    # with open('array_1s.txt', 'r') as file_array:
+    with open('array_10s.txt', 'r') as file_array:
+    # with open('array_1min.txt', 'r') as file_array:
         arr = [int(line.strip()) for line in file_array]
+    
+    print("Lista carregada...")
 
 
     # calculando o tempo de execução da função com construções funcionais
     print("Ordenando utilizando construções funcionais...")
     tempo_inicial = time.time()  # em segundos
-    arr = quick_sort_fc(arr)
+    sorted_arr1 = quick_sort_fc(arr)
     tempo_final = time.time()  # em segundos
 
     # imprimindo o tempo de execução
@@ -51,10 +55,11 @@ if __name__ == "__main__":
     print("Tempo de execução: ", tempo_final -
           tempo_inicial, file=file)  # em segundos
 
+
     # calculando o tempo de execução da função sem construções funcionais
     print("\nOrdenando sem utilizar construções funcionais...")
     tempo_inicial = time.time()  # em segundos
-    arr = quick_sort(arr)
+    sorted_arr2 = quick_sort(arr)
     tempo_final = time.time()  # em segundos
 
     # imprimindo o tempo de execução
