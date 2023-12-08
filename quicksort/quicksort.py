@@ -32,11 +32,13 @@ def quick_sort_fc(arr):
 if __name__ == "__main__":
     file = open("results.txt", "w")
     print("Resultados do quicksort (Python):", file=file)
-    print("----- 100 mil de elementos -----\n", file=file)
 
     # gerando um array de 100.000 de elementos aleatórios
-    arr = np.random.randint(1, 100000, 100000)
-    print("Lista de 1M de elementos gerada...")
+    # arr = np.random.randint(1, 100000, 100000)
+    # print("Lista de 1M de elementos gerada...")
+    with open('array.txt', 'r') as file_array:
+        arr = [int(line.strip()) for line in file_array]
+
 
     # calculando o tempo de execução da função com construções funcionais
     print("Ordenando utilizando construções funcionais...")
