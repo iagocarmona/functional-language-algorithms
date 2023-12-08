@@ -95,6 +95,7 @@ ghci>
 
 ## Como Executar o Quicksort
 
+#### De forma Interpretada com GHCI
 - Inicie o interpretador GHCI
 ```bash
 ghci
@@ -108,8 +109,17 @@ ghci
 
 - Execute o programa através da função principal
 
+```bash
 :m System.Random
 :set -package criterion
 :m Criterion.Main
 :l quicksort.hs
 main
+```
+
+#### De forma Compilada com GHC
+
+```bash
+ghc -package criterion quicksort.hs
+./quicksort
+```
