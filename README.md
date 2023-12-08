@@ -101,13 +101,7 @@ ghci>
 ghci
 ```
 
-- Para importar no `ghci` a biblioteca que gera números aleatórios
-
-- Para importar no `ghci` a biblioteca que realiza o benchmark
-
-- Para importar no `ghci` o programa a ser executado
-
-- Execute o programa através da função principal
+- Importe no `ghci` a biblioteca que gera números aleatórios, a biblioteca que realiza o benchmark, o programa a ser executado e execute o programa através da função principal, tudo isso através da sequência de comandos:
 
 ```bash
 :m System.Random
